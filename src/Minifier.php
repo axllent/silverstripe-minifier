@@ -15,7 +15,7 @@ class Minifier implements Requirements_Minifier
      * @param string $filename Name of file to display in case of error
      * @return string minified content
      */
-    public function minify ($content, $type, $fileName)
+    public function minify($content, $type, $fileName)
     {
         if ($type == 'css') {
             $minifier = new Minify\CSS();
@@ -24,7 +24,7 @@ class Minifier implements Requirements_Minifier
         } elseif ($type == 'js') {
             $minifier = new Minify\JS();
             $minifier->add($content);
-            return $minifier->minify();
+            return $minifier->minify() . ';';
         }
         return $content;
     }
