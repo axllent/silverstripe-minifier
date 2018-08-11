@@ -19,9 +19,9 @@ class PageController extends ContentController
         Requirements::process_combined_files();
 
         $js = [];
-        $js[] = 'themes/mysite/javascript/jquery.css';
-        $js[] = 'themes/mysite/javascript/bootstrap.css';
-        $js[] = 'themes/mysite/javascript/javascript.css';
+        $js[] = 'themes/mysite/javascript/jquery.js';
+        $js[] = 'themes/mysite/javascript/bootstrap.js';
+        $js[] = 'themes/mysite/javascript/javascript.js';
         Requirements::combine_files('javascript.js', $js);
         Requirements::process_combined_files();
     }
