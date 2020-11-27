@@ -2,4 +2,4 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\View\Requirements_Backend:
     properties:
       MinifyCombinedFiles: true
-      Minifier: %$Axllent\Minifier\Minifier
+      Minifier: '%$Axllent\Minifier\Minifier'
