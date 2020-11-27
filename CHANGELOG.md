@@ -2,6 +2,11 @@
 
 Notable changes to this project will be documented in this file.
 
+## [1.0.3]
+
+- Fixes some setups of unwrapped % in yml breaking site
+
+
 ## [1.0.2]
 
 - Fix .js extensions in example
