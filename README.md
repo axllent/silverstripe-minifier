@@ -1,25 +1,56 @@
-# Silverstripe Minifier
+# CSS & JavaScript minifier for Silverstripe
 
-An extension to integrate [matthiasmullie/minify](https://github.com/matthiasmullie/minify)
-minification into Silverstripe 4 to minify all combined JavaScript and CSS files.
+Automatically minify combined CSS & JavaScript files in Silverstripe 5 when running `Requirements::process_combined_files()`.
+Internally it uses [matthiasmullie/minify](https://github.com/matthiasmullie/minify) to remove whitespace, strips comments and combines files.
+
+This is useful if you do not require any JavaScript bundling or transpiling (eg: webpak, esbuild etc) but you still wish to minify the combined CSS and JavaScript files.
 
 
 ## Requirements
 
-- Silverstripe ^4
-
-For Silverstripe 5 please see [axllent/silverstripe-minify](https://github.com/axllent/silverstripe-minify).
+- Silverstripe ^5
 
 
-## Installation via composer
+## Installation
 
-`composer require axllent/silverstripe-minifier`
+```shell
+composer require axllent/silverstripe-minify
+```
+
+This module is plug-and-play, no configuration required after installing and running a `?flush`.
 
 
-## Usage
+## Usage example
 
-The module is currently just plug-and-play. Once installed it will automatically minify
-all combined JavaScript and CSS files in `live` mode. Do not forget to `?flush` after installation.
+```php
+<?php
 
-Please refer to the [PageController example](docs/en/Example.md) to see example usage in
-your PageController.
+use SilverStripe\CMS\Controllers\ContentController;
+use SilverStripe\View\Requirements;
+
+class PageController extends ContentController
+{
+    /**
+     * Init function
+     *
+     * @return void
+     */
+    protected function init()
+    {
+        parent::init();
+
+        $css[] = 'themes/site/css/file1.css';
+        $css[] = 'themes/site/css/file2.css';
+        $css[] = 'themes/site/css/file3.css';
+        Requirements::combine_files('combined.css', $css);
+        Requirements::process_combined_files();
+
+        $js[] = 'themes/site/js/file1.js';
+        $js[] = 'themes/site/js/file2.js';
+        $js[] = 'themes/site/js/file3.js';
+        Requirements::combine_files('combined.js', $js);
+        Requirements::process_combined_files();
+    }
+}
+
+```
