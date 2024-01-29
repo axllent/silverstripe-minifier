@@ -1,12 +1,14 @@
-# SilverStripe Minifier
+# Silverstripe Minifier
 
 An extension to integrate [matthiasmullie/minify](https://github.com/matthiasmullie/minify)
-minification into SilverStripe 4 to minify all combined JavaScript and CSS files.
+minification into Silverstripe 4 to minify all combined JavaScript and CSS files.
 
 
 ## Requirements
 
-- SilverStripe 4+
+- Silverstripe ^4
+
+For Silverstripe 5 please see [axllent/silverstripe-minify](https://github.com/axllent/silverstripe-minify).
 
 
 ## Installation via composer
