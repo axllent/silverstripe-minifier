@@ -1,6 +1,6 @@
 {
     "name": "axllent/silverstripe-minifier",
-    "description": "CSS & JavaScript minifier for Silverstripe 5",
+    "description": "CSS & JavaScript minifier for Silverstripe",
     "type": "silverstripe-vendormodule",
     "homepage": "https://github.com/axllent/silverstripe-minifier",
     "keywords": [
