@@ -14,7 +14,7 @@ This is useful if you do not require any JavaScript bundling or transpiling (eg:
 ## Installation
 
 ```shell
-composer require axllent/silverstripe-minify
+composer require axllent/silverstripe-minifier
 ```
 
 This module is plug-and-play, no configuration required after installing and running a `?flush`.
