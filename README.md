@@ -8,12 +8,10 @@ minification into Silverstripe 4 to minify all combined JavaScript and CSS files
 
 - Silverstripe ^4
 
-For Silverstripe 5 please see [axllent/silverstripe-minify](https://github.com/axllent/silverstripe-minify).
-
 
 ## Installation via composer
 
-`composer require axllent/silverstripe-minifier`
+`composer require axllent/silverstripe-minifier ^1`
 
 
 ## Usage
